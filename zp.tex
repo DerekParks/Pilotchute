@@ -1,0 +1,37 @@
+\documentclass{standalone} 
+
+%\documentclass[a0]{sciposter}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+%\usepackage[margin=-1in]{geometry}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts,multicol}
+\usepackage{graphicx,colortbl}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{hyperref}
+\hypersetup{pdfpagelayout=SinglePage}
+
+\pagestyle{plain}
+
+\newcommand{\pcsize}{28}
+\newcommand{\tapeSize}{30}
+\newcommand{\sewOverlap}{.5}
+
+\newcommand{\pcrad}{({\pcsize/2} )}
+\newcommand{\pcRadOver}{{(\pcsize/2 + \sewOverlap)}}
+\newcommand{\MpcRadOver}{{-(\pcsize/2 + \sewOverlap)}}
+\usepackage{verbatim}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}[x=1in,y=1in]
+
+\draw[color=red!60, very thick](0,0) circle (\pcRadOver);
+\draw[color=red!60, very thick, dashed](0,0) circle (\pcrad );
+\draw[line width=2in,black](-1.5,0) -- (1.5,0)  node [below left] {\huge 3" of 2" webbing};
+
+\node[text width=10in,align=center] at (5,5) {\Huge ZP or F1-11 $\oslash$ (\pcsize in + 2 * \sewOverlap)};
+\end{tikzpicture}
+
+
+\end{document}
